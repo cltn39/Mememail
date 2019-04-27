@@ -11,12 +11,41 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.4.0.slim.js"
         integrity="sha256-milezx5lakrZu0OP9b2QWFy1ft/UEUK6NH1Jqz8hUhQ=" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Meme Mail</title>
 </head>
 
 <body>
-    
-    <script src="assets/javacript/logic.js"></script>
-</body>
+        <div class="container">
+                <div class="jumbotron">
+                    <h1 style="text-align: center" class="display-3">MemeMail</h1>
+                </div>
 
+                <div class="card"></div>
+                <div class="row justify-content-start">
+                    <div class="col-sm-6">
+                <form>    
+                    <div class="form-group">
+                        <label for="inputMeme">Choose a meme</label>
+                        <input type="Meme" class="form-control" id="inputMeme" placeholder="something">
+                        <button type="search" class="btn btn-primary">Search</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputVictim">Choose a Victim</label>
+                        <input type="text" class="form-control" id="inputVictim" placeholder="someone@gitrekt.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputMessage">Add a message</label>
+                        <input type="text" class="form-control" id="inputMessage" placeholder="something something">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                </div>
+                </div>
+
+            </div>
+                
+                <script src="assets/javacript/logic.js"></script>
+                <script src="your_path/choreographer.min.js"></script>
+            </body>
+            
 </html>
