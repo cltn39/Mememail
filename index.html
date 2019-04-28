@@ -5,47 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- reset css -->
     <link rel="stylesheet" href="assets/css/reset.css">
+    <!-- Google font CDN -->
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Inconsolata|Playfair+Display|Rubik">
+    <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- style css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Jquery CDN -->
     <script src="https://code.jquery.com/jquery-3.4.0.slim.js"
         integrity="sha256-milezx5lakrZu0OP9b2QWFy1ft/UEUK6NH1Jqz8hUhQ=" crossorigin="anonymous"></script>
     <title>Meme Mail</title>
 </head>
 
 <body>
-        <div class="container">
-                <div class="jumbotron">
-                    <h1 style="text-align: center" class="display-3">MemeMail</h1>
-                </div>
+    <div class="container">
+        <div class="jumbotron">
+            <svg width="1060" height="500"></svg>
+            <div id="wrapper">
+                <div id="letters">
+                    <div class="m">m</div>
+                    <div class="e">e</div>
+                    <div class="mm">m</div>
+                    <div class="eea">e</div>
+                    <div class="mmm">m</div>
+                    <div class="eea">a</div>
+                    <div class="i">i</div>
+                    <div class="l">l</div>
+                    <br />
+                    <div class="line"></div>
 
-                <div class="card"></div>
-                <div class="row justify-content-start">
-                    <div class="col-sm-6">
-                <form>    
-                    <div class="form-group">
-                        <label for="inputMeme">Choose a meme</label>
-                        <input type="Meme" class="form-control" id="inputMeme" placeholder="something">
-                        <button type="search" class="btn btn-primary">Search</button>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputVictim">Choose a Victim</label>
-                        <input type="text" class="form-control" id="inputVictim" placeholder="someone@gitrekt.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputMessage">Add a message</label>
-                        <input type="text" class="form-control" id="inputMessage" placeholder="something something">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                    <p class="description">
+                        Send your friend the best meme
+                    </p>
                 </div>
-                </div>
-
+                <div class="scroll-overlay"></div>
             </div>
-                
-                <script src="assets/javacript/logic.js"></script>
-                <script src="your_path/choreographer.min.js"></script>
-            </body>
-            
+            <div class="links">
+
+                <div class="card quickstart">
+                    <div class="row justify-content-start">
+                        <div class="col-sm-12">
+                            <form>
+                                <div class="form-group">
+                                    <label for="inputMeme">Choose a meme</label>
+                                    <input type="Meme" class="form-control" id="inputMeme" placeholder="something">
+                                    <button type="search" class="btn btn-primary">Search</button>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputVictim">Choose a Victim</label>
+                                    <input type="text" class="form-control" id="inputVictim"
+                                        placeholder="someone@gitrekt.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputMessage">Add a message</label>
+                                    <input type="text" class="form-control" id="inputMessage"
+                                        placeholder="something something">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-down">
+                <p>scroll down</p>
+                <div class="down-arrow"></div>
+            </div>
+        </div>
+
+        <script src="./assets/javacript/dist/choreographer.min.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="assets/javacript/logic.js"></script>
+</body>
+
 </html>

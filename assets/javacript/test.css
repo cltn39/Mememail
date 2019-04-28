@@ -1,13 +1,10 @@
-
 html {
     height: 100%;
     overflow: hidden;
     margin: 0 0;
-}
-
-body {
-    background-image: url(https://previews.123rf.com/images/sklyarova/sklyarova1610/sklyarova161000024/65870067-seamless-pattern-with-watercolor-vintage-mail-envelopes-hand-drawn-on-a-white-background.jpg);
-    background-size: auto;
+  }
+  
+  body {
     height: 100%;
     overflow: auto;
     margin: 0 0;
@@ -43,13 +40,7 @@ body {
     top: 280px;
     width: 100%;
   }
-  svg {
-    position: fixed;
-    text-align: center;
-    top: 65px;
-    width: 100%;
-  } 
-
+  
   #letters div {
     display: inline-block;
     font-size: 50px;
@@ -79,13 +70,12 @@ body {
   
   .links .quickstart {
     font-family: 'Inconsolata', monospace;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    padding: 10px;
+    background-color: #080808;
+    color: white;
+    padding: 20px;
     display: inline-block;
     margin: 0 auto;
-    border-radius: 1px;
-    top: 25%
+    border-radius: 5px;
   }
   
   .links button {
@@ -110,8 +100,7 @@ body {
   .scroll-down {
     width: 100%;
     position: fixed;
-    top: 550px;
-    left: 0px;
+    top: 420px;
     text-align: center;
   }
   
