@@ -37,6 +37,7 @@ function displayGif() {
 }
 
 function randomGif() {
+    
     var gif = $("#gif-input").val().trim();
     var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=FJg7DrUcAEW9bNpFc4A1qMg8PFMWpPU9&tag=" + gif + "&rating=PG-13";
 
@@ -44,19 +45,15 @@ function randomGif() {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        console.log("random: " + response);
+        console.log(response);
         var randomDisplay = $("#randomGifs-display");
-        var randomImages = response.data;
         
-        randomImages.forEach(function (currentValue) {
             var randomImgDiv = $("<div>").addClass("image-display");
 
-            var randomImage = $(`<img src="${currentValue.images.fixed_width_still.url}" alt="Giphy Gif" class="gif-img" data-alt="${currentValue.images.fixed_width.url}" />`);
+            var randomImage = $(`<img src="${response.data.images.fixed_width_still.url}" alt="Giphy Gif" class="gif-img" data-alt="${response.data.images.fixed_width.url}" />`);
 
             randomImgDiv.append(randomImage);
-            randomDisplay.prepend(randomImgDiv);
-        })
-        
+            randomDisplay.prepend(randomImgDiv);   
 });
 }
 
@@ -68,7 +65,7 @@ function playGif(clickGif) {
     $(clickGif).attr("data-alt", static);
 }
 
-// Adding click event listeners to all elements with a class of "gif"
+
 $(document).on("click", "#search_button", displayGif);
 $(document).on("click", "#search_button", randomGif);
 
