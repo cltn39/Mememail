@@ -66,7 +66,7 @@ body {
   #letters .line {
     border-bottom-width: 8px;
     border-bottom-style: solid;
-    border-color: #ff7474;
+    border-color: #89b8b8;
     width: 0.01%;
   
     opacity: 0;
@@ -85,7 +85,7 @@ body {
     display: inline-block;
     margin: 0 auto;
     border-radius: 1px;
-    top: 25%
+    top: 25%;
   }
   
   .links button {
