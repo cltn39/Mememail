@@ -18,6 +18,9 @@
     <!-- Jquery CDN -->
     <script src="https://code.jquery.com/jquery-3.4.0.slim.js"
         integrity="sha256-milezx5lakrZu0OP9b2QWFy1ft/UEUK6NH1Jqz8hUhQ=" crossorigin="anonymous"></script>
+    <!-- d3org CDN (used for color circle $ hexagon) -->
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="canonical" href="https://d3js.org/">
     <title>Meme Mail</title>
 </head>
 
@@ -84,7 +87,7 @@
                 <div class="scroll-overlay"></div>
             </div>
             <div class="links">
-                <div class="card quickstart col-sm-4">
+                <div class="card quickstart col-sm-8">
                     <div class="row justify-content-start ">
                         <div class="col-sm-12">
                             <form>
@@ -93,6 +96,19 @@
                                     <input type="Meme" class="form-control" id="inputMeme" placeholder="something">
                                     <button type="search" class="btn btn-primary">Search</button>
                                 </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="card quickstart col-sm-8">
+                    <div id="examples">
+                        <div id="examples-deep"></div>
+                    </div>
+                </div>
+                <div class="card quickstart col-sm-8">
+                    <div class="row justify-content-start ">
+                        <div class="col-sm-12">
+                            <form>
                                 <div class="form-group">
                                     <label for="inputVictim">Choose a Victim</label>
                                     <input type="text" class="form-control" id="inputVictim"
@@ -117,7 +133,6 @@
         </div>
 
         <script src="./assets/javacript/dist/choreographer.min.js"></script>
-        <script src="https://d3js.org/d3.v4.min.js"></script>
         <script src="assets/javacript/logic.js"></script>
 </body>
 
