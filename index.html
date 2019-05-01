@@ -23,6 +23,45 @@
 
 <body>
     <div class="container">
+<!--Giphy API -->
+
+        <div class="row">
+            <div class="col-sm-3 bordertest">
+                <form id="gif-form">
+                    <label for="gif-input">Gif Match</label><br>
+                    <input type="text" id="gif-input" placeholder="Search Match..."><br>
+
+                    <span class="lead" class="col-md-4">
+                        <a class="btn btn-sm" href="#!" role="button" id="search_button"><i class="fas fa-fire"></i>
+                            Add</a>
+                    </span>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12 bordertest">
+              <h1>Gif Results:</h1>
+                <div id="gifs-display"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 bordertest">
+              <h1>Random Results:</h1>
+                <div id="randomGifs-display"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="assets/javascript/giphyAPI.js"> </script>
+
+<!------------------>
         <div class="jumbotron">
             <svg width="1060" height="500"></svg>
             <div id="wrapper">
