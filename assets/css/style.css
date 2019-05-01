@@ -85,7 +85,6 @@ body {
     display: inline-block;
     margin: 0 auto;
     border-radius: 1px;
-    top: 25%;
   }
   
   .links button {
@@ -157,4 +156,64 @@ body {
   
     .scroll-down { top: 300px; }
   }
-  
+
+  #examples {
+    background: #ddd;
+    height: 460px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    border-top: solid 1px #fff;
+}
+
+#examples:after,
+#examples:before {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    background: white;
+    height: 16px;
+    z-index: 2;
+}
+
+#examples:before {
+    bottom: -16px;
+    box-shadow: 0px -8px 16px rgba(0, 0, 0, .3);
+}
+
+#examples:after {
+    top: -16px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, .3);
+}
+
+#examples-deep {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#examples svg,
+#examples canvas {
+    position: absolute;
+}
+
+.example-mesh {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2px;
+}
+
+.example-anchor path {
+    fill: none;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.example-anchor path:hover {
+    stroke: #000;
+    stroke-width: 2px;
+}
