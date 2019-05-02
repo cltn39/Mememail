@@ -22,103 +22,105 @@
 </head>
 
 <body>
-    <div class="container">
-<!--Giphy API -->
-
-        <!-- <div class="row">
-            <div class="col-sm-3 bordertest">
-                <form id="gif-form">
-                    <label for="gif-input">Gif Match</label><br>
-                    <input type="text" id="gif-input" placeholder="Search Match..."><br>
-
-                    <span class="lead" class="col-md-4">
-                        <a class="btn btn-sm" href="#!" role="button" id="search_button"><i class="fas fa-fire"></i>
-                            Add</a>
-                    </span>
-                </form>
+    
+    <!------------------>
+    <div class="jumbotron">
+        <svg width="1060" height="500"></svg>
+        <div id="wrapper">
+            <div id="letters">
+                <div class="m">m</div>
+                <div class="e">e</div>
+                <div class="mm">m</div>
+                <div class="eea">e</div>
+                <div class="mmm">m</div>
+                <div class="eea">a</div>
+                <div class="i">i</div>
+                <div class="l">l</div>
+                <br />
+                <div class="line"></div>
+                
+                <p class="description">
+                    Send your friend the best meme
+                </p>
             </div>
+            <div class="scroll-overlay"></div>
         </div>
-
-
-        <div class="row">
-            <div class="col-sm-12 bordertest">
-              <h1>Gif Results:</h1>
-                <div id="gifs-display"></div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12 bordertest">
-              <h1>Random Results:</h1>
-                <div id="randomGifs-display"></div>
-            </div>
-        </div>
-
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
-    <script type="text/javascript" src="assets/javascript/giphyAPI.js"> </script> -->
-
-<!------------------>
-        <div class="jumbotron">
-            <svg width="1060" height="500"></svg>
-            <div id="wrapper">
-                <div id="letters">
-                    <div class="m">m</div>
-                    <div class="e">e</div>
-                    <div class="mm">m</div>
-                    <div class="eea">e</div>
-                    <div class="mmm">m</div>
-                    <div class="eea">a</div>
-                    <div class="i">i</div>
-                    <div class="l">l</div>
-                    <br />
-                    <div class="line"></div>
-
-                    <p class="description">
-                        Send your friend the best meme
-                    </p>
-                </div>
-                <div class="scroll-overlay"></div>
-            </div>
-            <div class="links">
-                <div class="card quickstart col-sm-4">
-                    <div class="row justify-content-start ">
-                        <div class="col-sm-12">
-                            <form>
-                                <div class="form-group">
+        <div class="links">
+            <div class="card quickstart col-sm-4">
+                <div class="row justify-content-start ">
+                    <div class="col-sm-12">
+                        <form>
+                            <div class="form-group">
                                     <label for="inputMeme">Choose a meme</label>
                                     <input type="Meme" class="form-control" id="inputMeme" placeholder="something">
-                                    <button type="search" class="btn btn-primary">Search</button>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputVictim">Choose a Victim</label>
-                                    <input type="text" class="form-control" id="inputVictim"
+                                    <a class="btn btn-sm" href="#!" role="button" id="search_button"><i class="fas fa-fire"></i>
+                                        Search</a>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputVictim">Choose a Victim</label>
+                                        <input type="text" class="form-control" id="inputVictim"
                                         placeholder="someone@gitrekt.com">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputMessage">Add a message</label>
-                                    <input type="text" class="form-control" id="inputMessage"
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputMessage">Add a message</label>
+                                        <input type="text" class="form-control" id="inputMessage"
                                         placeholder="something something">
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+                <div class="scroll-down">
+                    <p>scroll down</p>
+                    <div class="down-arrow"></div>
+                </div>
             </div>
-
-            <div class="scroll-down">
-                <p>scroll down</p>
-                <div class="down-arrow"></div>
+            
+            <script src="./assets/javacript/dist/choreographer.min.js"></script>
+            <script src="https://d3js.org/d3.v4.min.js"></script>
+            <script src="assets/javacript/logic.js"></script>
+           
+            <!--Giphy API -->
+            <div class="container">
+        
+                <!-- <div class="row">
+                    <div class="col-sm-3 bordertest">
+                        <form id="gif-form">
+                            <label for="gif-input">Gif Match</label><br>
+                            <input type="text" id="gif-input" placeholder="Search Match..."><br>
+        
+                            <span class="lead" class="col-md-4">
+                                <a class="btn btn-sm" href="#!" role="button" id="search_button"><i class="fas fa-fire"></i>
+                                    Add</a>
+                            </span>
+                        </form>
+                    </div>
+                </div> -->
+        
+        
+                <div class="row">
+                    <div class="col-sm-12 bordertest">
+                      <h1>Gif Results:</h1>
+                        <div id="gifs-display"></div>
+                    </div>
+                </div>
+        
+                <div class="row">
+                    <div class="col-sm-12 bordertest">
+                      <h1>Random Results:</h1>
+                        <div id="randomGifs-display"></div>
+                    </div>
+                </div>
+        
             </div>
-        </div>
-
-        <script src="./assets/javacript/dist/choreographer.min.js"></script>
-        <script src="https://d3js.org/d3.v4.min.js"></script>
-        <script src="assets/javacript/logic.js"></script>
-</body>
-
+        
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        
+            <script type="text/javascript" src="assets/javascript/giphyAPI.js"> </script>
+        </body>
+        
 </html>

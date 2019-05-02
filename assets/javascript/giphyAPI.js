@@ -3,7 +3,7 @@
 // displayGif function re-renders the HTML to display the appropriate content
 function displayGif() {   
     
-    var gif = $("#gif-input").val().trim();
+    var gif = $("#inputMeme").val().trim();
     var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=FJg7DrUcAEW9bNpFc4A1qMg8PFMWpPU9&q=" + gif + "&limit=&offset=0&rating=&lang=en";
     
     // Creates AJAX call for the specific gif button being clicked
@@ -38,7 +38,7 @@ function displayGif() {
 
 function randomGif() {
     
-    var gif = $("#gif-input").val().trim();
+    var gif = $("#inputMeme").val().trim();
     var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=FJg7DrUcAEW9bNpFc4A1qMg8PFMWpPU9&tag=" + gif + "&rating=PG-13";
 
     $.ajax({
