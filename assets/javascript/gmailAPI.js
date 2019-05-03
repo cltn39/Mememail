@@ -1,3 +1,5 @@
+src="https://apis.google.com/js/client.js?onload=handleClientLoad"
+
 var clientId = '796714123214-c2l83ece577rjvsfq1frveos1buijo1u.apps.googleusercontent.com';
       var apiKey = 'AIzaSyBjIPFf-EIox8cC0cXAnDwbZFOy_w2M_RQ';
       var scopes =
