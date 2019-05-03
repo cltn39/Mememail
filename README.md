@@ -1,22 +1,21 @@
-# group-project-1
+# group project 1 : Mememail
 
- With your group, answer each of the following questions:
-  ## target audience?
-  
-   Mememail is for anyone who know and love meme.
-   
-  ## What is the problem that the product will address?
-  
-  having a free accessible way to play with meme. Send meme to your friend.
-  
-  ## What is the primary goal of the product?
-  
-  you can send meme to a friend who are refusing to see amazing meme.
-  
-  ## Identify and prioritize essential user stories (limit this to 3 or fewer)?
-   1.send memes
-   2.search memes or pick random memes
-   3.you can be anonymous
+Search and send memes directly from website in email form.
+Anonymously send email containing funny memes.
 
-## User story
-As a user, I want to send random meme annoymously to my friend in order to make prank to him.
+## What we have used:
+
+ built using jQuery& Javascript, HTML5, CSS3, googlefont, giphy API, mailjs API, firebase, d3.org, choreography.js, and honeycomb.js
+
+## Features
+- Scroll down to access. Scroll down changes animation of the header.
+- Search engine allows upto 25 images at a request.
+- Search results shows in hexagon form. Can be clicked to access original image
+- Along with chosen meme, user can send short messages to targeted email address.
+
+## Caution:
+- limited request for mailing. 
+- Not fully optimized for smaller screen.
+
+## Demo:
+[https://cltn39.github.io/group-project-1/](https://cltn39.github.io/group-project-1/)

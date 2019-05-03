@@ -18,9 +18,15 @@
     <!-- Jquery CDN -->
     <script src="https://code.jquery.com/jquery-3.4.0.slim.js"
         integrity="sha256-milezx5lakrZu0OP9b2QWFy1ft/UEUK6NH1Jqz8hUhQ=" crossorigin="anonymous"></script>
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">    
+
     <!-- d3org CDN (used for color circle $ hexagon) -->
         <script src="https://d3js.org/d3.v4.min.js"></script>
     <link rel="canonical" href="https://d3js.org/">
+
     <title>Meme Mail</title>
 </head>
 
@@ -39,10 +45,9 @@
                             Add</a>
                     </span>
                 </form>
-            </div>
-        </div>
-
-
+</div>
+</div>
+    
         <div class="row">
             <div class="col-sm-12 bordertest">
               <h1>Gif Results:</h1>
@@ -112,28 +117,63 @@
                                 <div class="form-group">
                                     <label for="inputVictim">Choose a Victim</label>
                                     <input type="text" class="form-control" id="inputVictim"
+
                                         placeholder="someone@gitrekt.com">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputMessage">Add a message</label>
-                                    <input type="text" class="form-control" id="inputMessage"
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputMessage">Add a message</label>
+                                        <input type="text" class="form-control" id="inputMessage"
                                         placeholder="something something">
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+                <div class="scroll-down">
+                    <p>scroll down</p>
+                    <div class="down-arrow"></div>
+                </div>
+            </div>
+            
+            <script src="./assets/javacript/dist/choreographer.min.js"></script>
+            <script src="https://d3js.org/d3.v4.min.js"></script>
+            <script src="assets/javacript/logic.js"></script>
+           
+            <!--Giphy API -->
+            <div class="container">
+           
+                <div class="row">
+                    <div class="col-sm-12 bordertest">
+                      <h1>Gif Results:</h1>
+                        <div id="gifs-display"></div>
+                    </div>
+                </div>
+        
+                <div class="row">
+                    <div class="col-sm-12 bordertest">
+                      <h1>Random Results:</h1>
+                        <div id="randomGifs-display"></div>
+                    </div>
+                </div>
+        
             </div>
 
-            <div class="scroll-down">
-                <p>scroll down</p>
-                <div class="down-arrow"></div>
-            </div>
+        
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        
+            <script type="text/javascript" src="assets/javascript/giphyAPI.js"> </script>
+        </body>
+        
+
         </div>
 
         <script src="./assets/javacript/dist/choreographer.min.js"></script>
         <script src="assets/javacript/logic.js"></script>
 </body>
+
 
 </html>
