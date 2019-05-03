@@ -10,8 +10,9 @@ html {
 }
 
 body {
-    background-image: url(https://previews.123rf.com/images/sklyarova/sklyarova1610/sklyarova161000024/65870067-seamless-pattern-with-watercolor-vintage-mail-envelopes-hand-drawn-on-a-white-background.jpg);
-    background-size: auto;
+    background-image: url(https://backgroundcheckall.com/wp-content/uploads/2018/10/space-repeating-background-1.jpg);
+    background-size: 300px;
+    background-repeat: repeat;
     height: 100%;
     overflow: auto;
     margin: 0 0;
@@ -44,6 +45,7 @@ body {
   #letters {
     position: fixed;
     text-align: center;
+    color: rgb(238, 113, 221);
     top: 280px;
     width: 100%;
   }
@@ -116,17 +118,20 @@ body {
     top: 550px;
     left: 0px;
     text-align: center;
+    color: white;
   }
   
   .scroll-down p {
     font-size: 9px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    color: white;
   }
   
   .down-arrow {
     width: 30px;
     height: 30px;
+    color: white;
   
     display: inline-block;
     margin-top: -15px;
