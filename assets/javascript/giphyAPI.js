@@ -14,7 +14,7 @@ function displayGif() {
         method: "GET"
     }).then(function (response) {
         console.log(response);
-        //   $("#object").empty();
+          $("#gifs-display").empty();
         
         var display = $("#gifs-display");
         var gifImages = response.data;
@@ -46,6 +46,8 @@ function randomGif() {
         method: "GET"
     }).then(function (response) {
         console.log(response);
+
+        $("#randomGifs-display").empty();
         var randomDisplay = $("#randomGifs-display");
         
             var randomImgDiv = $("<div>").addClass("image-display");
