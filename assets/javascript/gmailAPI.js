@@ -164,7 +164,7 @@ var clientId = '796714123214-c2l83ece577rjvsfq1frveos1buijo1u.apps.googleusercon
 
       function replyTidy()
       {
-        $('#reply-modal').modal('hide');
+        // $('#reply-modal').modal('hide');
 
         $('#reply-message').val('');
 
