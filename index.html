@@ -24,10 +24,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <!-- d3org CDN (used for color circle $ hexagon) -->
+    <!-- d3org CDN (used for color circle) -->
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <link rel="canonical" href="https://d3js.org/">
-
     <!-- gmail authorization -->
     <script type="text/javascript" src="assets/javascript/gmailAPI.js"> </script>
 
@@ -36,8 +35,8 @@
 
 <body>
     <div class="container">
-        <svg width="1060" height="500"></svg>
         <div id="wrapper">
+                <svg width="1060" height="500"></svg>
             <div id="letters">
                 <div class="m">m</div>
                 <div class="e">e</div>
@@ -57,19 +56,21 @@
             <div class="scroll-overlay"></div>
         </div>
         <div class="links">
-            <div class="card quickstart col-sm-8">
-                <div class="row justify-content-start ">
+
+            <div class="kard">
+                <div class="kard_image"> <img src="https://i.redd.it/b3esnz5ra34y.jpg" /> </div>
+                <div class="kard_title title-white">
                     <div class="col-sm-12">
                         <form>
                             <div class="form-group">
-                                <label for="inputMeme">Choose a meme</label>
+                                <label for="inputMeme">Choose a keyword</label>
                                 <input type="Meme" class="form-control" id="inputMeme" placeholder="something">
-                                <div class="btn-group">                                          
-                                <button type="button" id="search_button" class="btn btn-primary"> 
-                                    <i class="fas fa-play"></i> Search</button>
-                                    <button type="button" id="random_button" class="btn btn-primary"> 
+                                <div class="btn-group">
+                                    <button type="button" id="search_button" class="btn btn-primary">
+                                        <i class="fas fa-play"></i> Search</button>
+                                    <button type="button" id="random_button" class="btn btn-primary">
                                         <i class="fas fa-random"></i> Random</button>
-                                        </div>                                    
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -77,34 +78,33 @@
             </div>
 
             <!-- Giphy API Display -->
-            <div class="card quickstart col-sm-8">
-
-
-                <div class="row">
+            <div class="kardbox" id="showResult" style="display:none">
+                <div class="kardbox_image"> <img src="http://eskipaper.com/images/colorful-phone-wallpaper-1.jpg" />
+                </div>
+                <div class="kardbox_title title-white">
                     <div class="col-sm-12 bordertest">
                         <h1>Gif Results:</h1>
                         <div id="gifs-display"></div>
                     </div>
                 </div>
+            </div>
 
-                <div class="row">
+            <div class="kardboxrandom" id="showRandomResult" style="display:none">
+                <div class="kardboxrandom_image"> <img src="http://eskipaper.com/images/colorful-phone-wallpaper-1.jpg" />
+                </div>
+                <div class="kardboxrandom_title title-white">
                     <div class="col-sm-12 bordertest">
                         <h1>Random Results:</h1>
                         <div id="randomGifs-display"></div>
                     </div>
                 </div>
-
-
             </div>
 
-
-            <div class="card quickstart col-sm-8">
-                <div id="examples">
-                    <div id="examples-deep"></div>
+            <div class="kardboxform" id="filler" style="display:none">
+                <div class="kardboxform_image"> <img
+                        src="https://www.desktopbackground.org/p/2011/11/05/292263_colorful-coral-reef-desktop-under-water-wallpapers-hd-phone_1920x1080_h.jpg" />
                 </div>
-            </div>
-            <div class="card quickstart col-sm-8">
-                <div class="row justify-content-start ">
+                <div class="kardboxform_title title-white">
                     <div class="col-sm-12">
 
                         <!-- GMAIL API FORM -->
@@ -113,19 +113,20 @@
                         <form onsubmit="return sendEmail();">
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="compose-to"><i class="fas fa-user-friends"></i> Choose a Friend/Victim <i class="fas fa-user-friends"></i></label>
-                                    <input type="email" class="form-control" id="compose-to" placeholder="someone@gitrekt.com"
-                                        required />
+                                    <label for="compose-to"><i class="fas fa-user-friends"></i> Choose a
+                                        Friend/Victim <i class="fas fa-user-friends"></i></label>
+                                    <input type="email" class="form-control" id="compose-to"
+                                        placeholder="someone@gitrekt.com" required />
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="compose-subject" placeholder="Subject (e.g. YOU GOT MEME!)"
-                                        required />
+                                    <input type="text" class="form-control" id="compose-subject"
+                                        placeholder="Subject (e.g. YOU GOT MEME!)" required />
                                 </div>
 
                                 <div class="form-group">
-                                    <textarea class="form-control" id="compose-message" placeholder="Add A Message" rows="5"
-                                        required></textarea>
+                                    <textarea class="form-control" id="compose-message" placeholder="Add A Message"
+                                        rows="5" required></textarea>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -134,7 +135,6 @@
                                     <i class="fas fa-paper-plane"></i> Send</button>
                             </div>
                         </form>
-
                     </div>
                 </div>
             </div>
@@ -146,6 +146,7 @@
         </div>
 
     </div>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -161,10 +162,8 @@
 
     <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
     <script src="./assets/javacript/dist/choreographer.min.js"></script>
-
-    <script type="text/javascript" src="assets/javascript/giphyAPI.js"> </script>
-    
     <script src="assets/javacript/logic.js"></script>
+    <script type="text/javascript" src="assets/javascript/giphyAPI.js"> </script>
 </body>
 
 

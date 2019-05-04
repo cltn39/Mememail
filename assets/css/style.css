@@ -66,14 +66,13 @@ body {
     position: fixed;
     text-align: center;
     color: rgb(238, 113, 221);
-    top: 280px;
+    top: 200px;
     width: 100%;
   }
   svg {
     position: fixed;
-    text-align: center;
-    top: 65px;
-    width: 100%;
+    margin: auto;
+    display: inline-block;
   } 
 
   #letters div {
@@ -92,7 +91,7 @@ body {
   #letters .line {
     border-bottom-width: 8px;
     border-bottom-style: solid;
-    border-color: #89b8b8;
+    border-color: #16acac;
     width: 0.01%;
   
     opacity: 0;
@@ -186,65 +185,157 @@ body {
     .scroll-down { top: 300px; }
   }
 
-
-  #examples {
-    background: #ddd;
-    height: 460px;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
-    border-top: solid 1px #fff;
+.kard {
+  margin: 30px auto;
+  width: 750px;
+  height: 180px;
+  border-radius: 50px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+  background-image: url("https://i.redd.it/b3esnz5ra34y.jpg");
+  z-index: 8
 }
 
-#examples:after,
-#examples:before {
-    content: "";
-    display: block;
-    width: 100%;
-    position: absolute;
-    background: white;
-    height: 16px;
-    z-index: 2;
+.kard .kard_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
 }
 
-#examples:before {
-    bottom: -16px;
-    box-shadow: 0px -8px 16px rgba(0, 0, 0, .3);
+.kard .kard_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
 }
 
-#examples:after {
-    top: -16px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, .3);
+.kard .kard_title {
+  border-radius: 0px 0px 40px 40px;
+  font-size: 25px;
+  margin-top: -170px;
+  height: 40px;
 }
 
-#examples-deep {
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
+.kard:hover {
+  transform: scale(1.1, 1.1);
 }
 
-#examples svg,
-#examples canvas {
-    position: absolute;
+.title-white {
+  color: white;
 }
 
-.example-mesh {
-    fill: none;
-    stroke: #fff;
-    stroke-width: 2px;
+.kardbox {
+  margin: 30px auto;
+  width: 750px;
+  height: 1030px;
+  border-radius: 50px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+  background-image: url("https://i.redd.it/b3esnz5ra34y.jpg");
 }
 
-.example-anchor path {
-    fill: none;
-    pointer-events: all;
-    cursor: pointer;
+.kardbox .kardbox_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
 }
 
-.example-anchor path:hover {
-    stroke: #000;
-    stroke-width: 2px;
+.kardbox .kardbox_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
 }
 
+.kardbox .kardbox_title {
+  border-radius: 0px 0px 40px 40px;
+  font-size: 25px;
+  margin-top: -1000px;
+  height: 40px;
+}
+
+.kardbox:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+}
+
+.kardboxrandom {
+  margin: 30px auto;
+  width: 750px;
+  height: 360px;
+  border-radius: 50px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+  background-image: url("https://i.redd.it/b3esnz5ra34y.jpg");
+}
+
+.kardboxrandom .kardboxrandom_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.kardboxrandom .kardboxrandom_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.kardboxrandom .kardboxrandom_title {
+  border-radius: 0px 0px 40px 40px;
+  font-size: 25px;
+  margin-top: -320px;
+  height: 40px;
+}
+
+.kardboxrandom:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+}
+
+.kardboxform {
+  margin: 30px auto;
+  width: 750px;
+  height: 500px;
+  border-radius: 50px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+  background-image: url("https://i.redd.it/b3esnz5ra34y.jpg");
+}
+
+.kardboxform .kardboxform_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.kardboxform .kardboxform_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.kardboxform .kardboxform_title {
+  border-radius: 0px 0px 40px 40px;
+  font-size: 25px;
+  margin-top: -470px;
+  height: 40px;
+}
+
+.kardboxform:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}

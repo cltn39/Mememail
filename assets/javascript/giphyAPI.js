@@ -4,7 +4,7 @@
 function displayGif() {   
     
     var gif = $("#inputMeme").val().trim();
-    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=FJg7DrUcAEW9bNpFc4A1qMg8PFMWpPU9&q=" + gif + "&limit=&offset=0&rating=&lang=en";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=FJg7DrUcAEW9bNpFc4A1qMg8PFMWpPU9&q=" + gif + "&limit=12&offset=0&rating=&lang=en";
     
     // Creates AJAX call for the specific gif button being clicked
     
@@ -26,9 +26,9 @@ function displayGif() {
             
             // creates a new div with .image-display class to help with the css
             var imgDiv = $("<div>").addClass("image-display");
-            
+        
             // creates image element and assigning its src/data-alt using template literals, which makes it easier to read.
-            var image = $(`<img src="${currentValue.images.original_still.url}" alt="Giphy Gif" class="gif-img" data-alt="${currentValue.images.original.url}" />`);
+            var image = $(`<img src="${currentValue.images.original_still.url}" alt="Giphy Gif" class="gif-img" style="border:solid" data-alt="${currentValue.images.original.url}" />`);
         
             //append img element with the src: url for the gif to imgdiv
             imgDiv.append(image);
@@ -55,7 +55,7 @@ function randomGif() {
         var randomDisplay = $("#randomGifs-display");
         
             var randomImgDiv = $("<div>").addClass("image-display");
-
+        
             var randomImage = $(`<img src="${response.data.images.original_still.url}" alt="Giphy Gif" class="gif-img" data-alt="${response.data.images.original.url}" />`);
 
             randomImgDiv.append(randomImage);
@@ -79,14 +79,29 @@ function playGif(clickGif) {
         $(clickGif).attr("state", "still")
     }
 }
-
+function showResult() {
+    $("#showResult").show();
+    $("#showRandomResult").hide();
+}
+function showResultRandom() {
+    $("#showRandomResult").show();
+    $("#showResult").hide();
+}
 
 $(document).on("click", "#search_button", displayGif);
+$(document).on("click", "#search_button", showResult);
 $(document).on("click", "#random_button", randomGif);
+$(document).on("click", "#random_button", showResultRandom);
 
 // This event listener is triggered when the user clicks a gif.
 $(document).on("click", ".gif-img", function () {
     playGif(this);
+    $("#filler").show();
 });
 
-
+var reference = document.querySelector('.my-button');
+var popper = document.querySelector('.my-popper');
+var popperInstance = new Popper(reference, popper, {
+    placement: 'left',
+    
+});
