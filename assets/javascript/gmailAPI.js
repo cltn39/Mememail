@@ -1,31 +1,44 @@
+      
+      // Our Credentials
+      // we need to create two sets of credentials: a browser API key and an OAuth client ID.
       var clientId = '796714123214-c2l83ece577rjvsfq1frveos1buijo1u.apps.googleusercontent.com';
       var apiKey = 'AIzaSyBjIPFf-EIox8cC0cXAnDwbZFOy_w2M_RQ';
+
+      // These two scopes are all we need to read and send an email
       var scopes =
         'https://www.googleapis.com/auth/gmail.readonly '+
         'https://www.googleapis.com/auth/gmail.send';
 
+        // handleClientLoad() which will automatically be called once Google’s JavaScript client library has loaded into the page
+        // handleClientLoad() simply sets the API key and passes off to checkAuth()
       function handleClientLoad() {
         gapi.client.setApiKey(apiKey);
         window.setTimeout(checkAuth, 1);
       }
 
+      // checkAuth() checks if the user has previously authenticated our app with Google.
       function checkAuth() {
-        gapi.auth.authorize({
-          client_id: clientId,
-          scope: scopes,
-          immediate: true
-        }, handleAuthResult);
-      }
-
-      function handleAuthClick() {
-        gapi.auth.authorize({
-          client_id: clientId,
-          scope: scopes,
-          immediate: false
-        }, handleAuthResult);
-        return false;
-      }
-
+          gapi.auth.authorize({
+              client_id: clientId,
+              scope: scopes,
+              immediate: true
+            }, handleAuthResult);
+        }
+        
+        // handleAuthClick() simply executes the same authentication function as checkAuth() 
+        // but will present the user with a login/permissions modal.
+        function handleAuthClick() {
+            gapi.auth.authorize({
+                client_id: clientId,
+                scope: scopes,
+                immediate: false
+            }, handleAuthResult);
+            return false;
+        }
+        
+        // handleAuthResult() then does one of two things:
+        // if the user is already authenticated it’ll load the Gmail API using loadGmailApi().
+        //  alternatively it’ll display the authorize button on the UI and attach a click event to it which will trigger handleAuthClick()
       function handleAuthResult(authResult) {
         if(authResult && !authResult.error) {
           loadGmailApi();
@@ -40,16 +53,23 @@
         }
       }
 
+      // This function loads the Gmail API functionality from Google’s JavaScript client library 
+      // and then calls our displayInbox() function.
       function loadGmailApi() {
         gapi.client.load('gmail', 'v1', displayInbox);
       }
 
+      // This will return a JSON object containing the ids of the last ten messages received by the authenticated user
       function displayInbox() {
         var request = gapi.client.gmail.users.messages.list({
           'userId': 'me',
           'labelIds': 'INBOX',
           'maxResults': 10
         });
+
+        //  loop through each message and request more data specific to that message
+        // call the User.messages: get endpoint to fetch a single message by it’s id, 
+        // and pass the response over to another function, appendMessageRow().
         request.execute(function(response) {
           $.each(response.messages, function() {
             var messageRequest = gapi.client.gmail.users.messages.get({
@@ -61,6 +81,9 @@
         });
       }
 
+      //  append() function to append rows containing the message data to the HTML table
+      // making use of Bootstrap’s modal functionality to launch a pre-defined modal window when the link is clicked.
+      // UNFORTUNATELY, we don't want to show our emails. This feature will not appear. 
       function appendMessageRow(message) {
         $('.table-inbox tbody').append(
           '<tr>\
@@ -118,10 +141,14 @@
         });
       }
 
+      // The first thing we do when sendEmail() is called is disable the send button.
+      // It’s important to disable the form submit functionality whenever submission logic is carried out via Ajax, 
+      // as this prevents the user from re-clicking the button whilst a request is in progress.
       function sendEmail()
       {
         $('#send-button').addClass('disabled');
 
+        // grab the values from our compose form and hand everything to sendMessage()
         sendMessage(
           {
             'To': $('#compose-to').val(),
@@ -131,9 +158,12 @@
           composeTidy
         );
 
+        //  Returning false from an onsubmit function is important when processing the form via Ajax 
+        // — it prevents the form from submitting and reloading the page.
         return false;
       }
 
+      // this funciton simply hides the compose modal, clears the input fields and then re-enables the Send button.
       function composeTidy()
       {
         // $('#compose-modal').modal('hide');
@@ -178,6 +208,8 @@
         $('#reply-message-id').val(message_id);
       }
 
+      // This function is where we interact with the Gmail API. 
+      // It accepts an object of email headers, the email body and a callback function.
       function sendMessage(headers_obj, message, callback)
       {
         var email = '';
@@ -187,6 +219,9 @@
 
         email += "\r\n" + message;
 
+        //  Note that the email message needs to be base-64 encoded, we use window.btoa() for this.
+        // Also note that Google’s base-64 implementation differs from what window.btoa() and window.atob() provide 
+        // – so we need to carry out some character replacements after the encoding. Specifically we must replace + with - and / with _.
         var sendRequest = gapi.client.gmail.users.messages.send({
           'userId': 'me',
           'resource': {
@@ -197,6 +232,10 @@
         return sendRequest.execute(callback);
       }
 
+
+      // getBody(), getHeader() and getHTMLPart() are utility functions we’ve defined to abstract out some of the nuances 
+      // from working with the Gmail API message resource,  which returns multi-part emails in an inconsistent format (nested parts),
+      // along with a message body which is base64 and UTF-8 encoded.
       function getHeader(headers, index) {
         var header = '';
         $.each(headers, function(){
