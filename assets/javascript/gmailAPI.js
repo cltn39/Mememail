@@ -136,7 +136,7 @@ var clientId = '796714123214-c2l83ece577rjvsfq1frveos1buijo1u.apps.googleusercon
 
       function composeTidy()
       {
-        $('#compose-modal').modal('hide');
+        // $('#compose-modal').modal('hide');
 
         $('#compose-to').val('');
         $('#compose-subject').val('');
