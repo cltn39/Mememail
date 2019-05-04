@@ -106,43 +106,32 @@
             <div class="card quickstart col-sm-8">
                 <div class="row justify-content-start ">
                     <div class="col-sm-12">
-                        <form>
-                            <div class="form-group">
-                                <label for="inputVictim">Choose a Victim</label>
-                                <input type="text" class="form-control" id="inputVictim"
-                                    placeholder="someone@gitrekt.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="inputMessage">Add a message</label>
-                                <input type="text" class="form-control" id="inputMessage"
-                                    placeholder="something something">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
 
-                        <!-- GMAIL API INTEGRATE IT SOMEHOW -->
+                        <!-- GMAIL API FORM -->
                         <button id="authorize-button" class="btn btn-primary hidden">Authorize</button>
 
                         <form onsubmit="return sendEmail();">
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="compose-to" placeholder="To"
+                                    <label for="compose-to"><i class="fas fa-user-friends"></i> Choose a Friend/Victim <i class="fas fa-user-friends"></i></label>
+                                    <input type="email" class="form-control" id="compose-to" placeholder="someone@gitrekt.com"
                                         required />
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="compose-subject" placeholder="Subject"
+                                    <input type="text" class="form-control" id="compose-subject" placeholder="Subject (e.g. YOU GOT MEME!)"
                                         required />
                                 </div>
 
                                 <div class="form-group">
-                                    <textarea class="form-control" id="compose-message" placeholder="Message" rows="10"
+                                    <textarea class="form-control" id="compose-message" placeholder="Add A Message" rows="5"
                                         required></textarea>
                                 </div>
                             </div>
                             <div class="modal-footer">
                                 <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
-                                <button type="submit" id="send-button" class="btn btn-primary">Send</button>
+                                <button type="submit" id="send-button" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i> Send</button>
                             </div>
                         </form>
 
