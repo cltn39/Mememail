@@ -98,10 +98,3 @@ $(document).on("click", ".gif-img", function () {
     playGif(this);
     $("#filler").show();
 });
-
-var reference = document.querySelector('.my-button');
-var popper = document.querySelector('.my-popper');
-var popperInstance = new Popper(reference, popper, {
-    placement: 'left',
-    
-});

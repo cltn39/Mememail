@@ -29,6 +29,11 @@
     <link rel="canonical" href="https://d3js.org/">
     <!-- gmail authorization -->
     <script type="text/javascript" src="assets/javascript/gmailAPI.js"> </script>
+    <!-- firebase JS SDK -->
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-firestore.js"></script>
 
     <title>Meme Mail</title>
 </head>
@@ -36,8 +41,9 @@
 <body>
     <div class="container">
         <div id="wrapper">
-                <svg width="1060" height="500"></svg>
+            <svg width="1060" height="500"></svg>
             <div id="letters">
+                <div id="mailSentValue"></div>
                 <div class="m">m</div>
                 <div class="e">e</div>
                 <div class="mm">m</div>
@@ -132,7 +138,7 @@
                             <div class="modal-footer">
                                 <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
                                 <button type="submit" id="send-button" class="btn btn-primary">
-                                    <i class="fas fa-paper-plane"></i> Send</button>
+                                    <i class="fas fa-paper-plane sendButton"></i> Send</button>
                             </div>
                         </form>
                     </div>
@@ -144,7 +150,6 @@
             <p>scroll down</p>
             <div class="down-arrow"></div>
         </div>
-
     </div>
 
 
@@ -159,12 +164,11 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
     <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
     <script src="./assets/javacript/dist/choreographer.min.js"></script>
     <script src="assets/javacript/logic.js"></script>
+    <script src="./assets/javacript/firebase.js"></script>
     <script type="text/javascript" src="assets/javascript/giphyAPI.js"> </script>
 </body>
-
 
 </html>
