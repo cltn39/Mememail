@@ -5,7 +5,7 @@ Anonymously send email containing funny memes.
 
 ## What we have used:
 
- built using jQuery& Javascript, HTML5, CSS3, googlefont, giphy API, mailjs API, firebase, d3.org, choreography.js, and honeycomb.js
+ built using jQuery& Javascript, HTML5, CSS3, googlefont, giphy API, Gmail API, firebase, d3.org, choreography.js, and honeycomb.js
 
 ## Features
 - Scroll down to access. Scroll down changes animation of the header.
