@@ -1,6 +1,26 @@
+/* buttons group */
+#btn-group button{
+  float: left;
+  margin: 10px;
+}
+
+#search_button {
+  margin-right: 5px;
+}
+
+#random_button {
+  margin-left: 5px;
+}
+
+/* gifs display */
 .image-display {
     margin: 10px;
     float: left;
+}
+
+.gif-img {
+  height: 210px;
+  width: 215px;
 }
 
 html {

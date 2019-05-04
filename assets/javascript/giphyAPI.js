@@ -26,7 +26,7 @@ function displayGif() {
             var imgDiv = $("<div>").addClass("image-display");
             
             // creates image element and assigning its src/data-alt using template literals, which makes it easier to read.
-            var image = $(`<img src="${currentValue.images.fixed_width_still.url}" alt="Giphy Gif" class="gif-img" data-alt="${currentValue.images.fixed_width.url}" />`);
+            var image = $(`<img src="${currentValue.images.original_still.url}" alt="Giphy Gif" class="gif-img" data-alt="${currentValue.images.original.url}" />`);
         
             //append img element with the src: url for the gif to imgdiv
             imgDiv.append(image);
@@ -50,7 +50,7 @@ function randomGif() {
         
             var randomImgDiv = $("<div>").addClass("image-display");
 
-            var randomImage = $(`<img src="${response.data.images.fixed_width_still.url}" alt="Giphy Gif" class="gif-img" data-alt="${response.data.images.fixed_width.url}" />`);
+            var randomImage = $(`<img src="${response.data.images.original_still.url}" alt="Giphy Gif" class="gif-img" data-alt="${response.data.images.original.url}" />`);
 
             randomImgDiv.append(randomImage);
             randomDisplay.prepend(randomImgDiv);   
@@ -67,7 +67,7 @@ function playGif(clickGif) {
 
 
 $(document).on("click", "#search_button", displayGif);
-$(document).on("click", "#search_button", randomGif);
+$(document).on("click", "#random_button", randomGif);
 
 // This event listener is triggered when the user clicks a gif.
 $(document).on("click", ".gif-img", function () {
