@@ -83,7 +83,13 @@ body {
     font-family: 'Rubik', sans-serif;
     transition: color 0.1s ease-in-out;
   }
-  
+  #mailSentValue {
+    text-align: center;
+    position: fixed;
+    top: 150px;
+    color: lightcoral;
+  }
+
   #letters .o {
     transition: none;
   }
