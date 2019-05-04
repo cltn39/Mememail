@@ -14,7 +14,9 @@ function displayGif() {
         method: "GET"
     }).then(function (response) {
         console.log(response);
+
           $("#gifs-display").empty();
+          $("#randomGifs-display").empty();
         
         var display = $("#gifs-display");
         var gifImages = response.data;
@@ -48,6 +50,8 @@ function randomGif() {
         console.log(response);
 
         $("#randomGifs-display").empty();
+        $("#gifs-display").empty();
+
         var randomDisplay = $("#randomGifs-display");
         
             var randomImgDiv = $("<div>").addClass("image-display");
@@ -63,8 +67,17 @@ function randomGif() {
 function playGif(clickGif) {
     var static = $(clickGif).attr("src");
     var dynamic = $(clickGif).attr("data-alt");
+    var state = $(clickGif).attr("state");
     $(clickGif).attr("src", dynamic);
     $(clickGif).attr("data-alt", static);
+
+    if (state === "still") {
+        $("#compose-message").text(dynamic);
+        $(clickGif).attr("state" , "animted") 
+    } else {
+        $("#compose-message").text(static);
+        $(clickGif).attr("state", "still")
+    }
 }
 
 
