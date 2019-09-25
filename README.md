@@ -1,4 +1,4 @@
-# group project 1 : Mememail
+# Mememail
 
 Search and send memes directly from website in email form.
 Anonymously send email containing funny memes.
