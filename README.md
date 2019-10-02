@@ -35,10 +35,10 @@ Anonymously send email containing funny memes.
 - Not fully optimized for smaller screen.
 
 ## 🏠 Link
-[https://cltn39.github.io/group-project-1/](https://cltn39.github.io/group-project-1/)
+[https://cltn39.github.io/Mememail/](https://cltn39.github.io/Mememail/)
 
 ## 🏠 Preview:
-[![image.png](https://i.postimg.cc/1Rvz8CRB/image.png)](https://cltn39.github.io/group-project-1/)
+[![image.png](https://i.postimg.cc/1Rvz8CRB/image.png)](https://cltn39.github.io/Mememail/)
 
 ## Show your support
 
